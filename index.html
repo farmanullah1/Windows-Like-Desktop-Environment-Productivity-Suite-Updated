@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MyOS</title>
+    <meta name="description" content="MyOS — a hybrid desktop environment, productivity suite, and developer workspace." />
+    <meta name="keywords" content="MyOS, desktop, workspace, productivity, terminal, file explorer, sql server, electron, react" />
+    <meta name="author" content="MyOS Engineering Team" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://127.0.0.1:5173/" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/assets/branding/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/branding/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/assets/branding/mask-icon.svg" color="#E06C38" />
+
+    <!-- PWA & Theme Configuration -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#E06C38" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MyOS" />
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://127.0.0.1:5173/" />
+    <meta property="og:title" content="MyOS" />
+    <meta property="og:description" content="A hybrid desktop environment, productivity suite, and developer workspace." />
+    <meta property="og:image" content="/assets/branding/favicon-512.png" />
+    <meta property="og:site_name" content="MyOS" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MyOS" />
+    <meta name="twitter:description" content="A hybrid desktop environment, productivity suite, and developer workspace." />
+    <meta name="twitter:image" content="/assets/branding/favicon-512.png" />
+
+    <!-- Preload Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body class="desktop-body" oncontextmenu="return false;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

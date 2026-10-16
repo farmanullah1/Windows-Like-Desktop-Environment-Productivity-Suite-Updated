@@ -1,0 +1,53 @@
+{
+  "name": "myos",
+  "productName": "MyOS",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MyOS — A hybrid desktop environment, productivity suite, and developer workspace.",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup-and-run.mjs",
+    "setup:ci": "npm ci && node scripts/setup-and-run.mjs",
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "vite --host 0.0.0.0 --port 3000",
+    "build": "node ./node_modules/typescript/lib/tsc.js -b && node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview --host 127.0.0.1",
+    "server": "node server/index.js",
+    "test": "node --experimental-strip-types --test ./tests/contracts.test.mjs",
+    "start": "npm run dev:web",
+    "start:myos": "node scripts/start-myos.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-spring/web": "^10.1.2",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "gsap": "^3.15.0",
+    "lottie-react": "^3.1.2",
+    "lucide-react": "^0.475.0",
+    "motion": "^14.0.0",
+    "mssql": "^12.7.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mssql": "^12.3.0",
+    "@types/node": "^22.13.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

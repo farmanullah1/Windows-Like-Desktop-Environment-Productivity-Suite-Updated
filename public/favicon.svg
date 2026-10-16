@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <title>MyOS Favicon</title>
+  <!-- Desktop Surface Canvas Tile -->
+  <rect x="32" y="32" width="448" height="448" rx="64" fill="#14171D" stroke="#2D333F" stroke-width="3" />
+  <!-- Active Window Frame -->
+  <rect x="56" y="56" width="400" height="400" rx="48" fill="#1E222A" stroke="#2D333F" stroke-width="2" />
+  <!-- Window Header Divider -->
+  <line x1="56" y1="120" x2="456" y2="120" stroke="#2D333F" stroke-width="2" />
+  <!-- Window Dots -->
+  <circle cx="96" cy="88" r="8" fill="#E06C38" />
+  <circle cx="124" cy="88" r="8" fill="#2D333F" />
+  <circle cx="152" cy="88" r="8" fill="#2D333F" />
+  <!-- Stylized Geometric M Monogram -->
+  <g>
+    <rect x="132" y="190" width="44" height="200" rx="12" fill="#ECEFF4" />
+    <rect x="336" y="190" width="44" height="200" rx="12" fill="#ECEFF4" />
+    <path d="M 176 190 L 256 318 L 224 340 L 158 234 Z" fill="#E06C38" />
+    <path d="M 336 190 L 256 318 L 288 340 L 354 234 Z" fill="#E06C38" />
+    <circle cx="256" cy="372" r="14" fill="#E06C38" stroke="#1E222A" stroke-width="3" />
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+# robots.txt for Windows-Like Desktop Environment & Productivity Suite
+User-agent: *
+Allow: /
+
+Sitemap: https://desktop.local/sitemap.xml

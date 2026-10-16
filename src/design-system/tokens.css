@@ -1,0 +1,165 @@
+/* ==============================================================================
+   CENTRALIZED DESIGN TOKENS & CSS CUSTOM PROPERTIES
+   Windows-Like Desktop Environment & Productivity Suite (v5.0)
+   ============================================================================== */
+
+:root {
+  /* Surface Hierarchies - Grounded Executive Charcoal Slate (#14171D) & Off-Black Slate (#1E222A) */
+  --bg-desktop: #14171D;
+  --surface-base: #14171D;
+  --surface-card: #1E222A;
+  --surface-elevated: #1E222A;
+  --surface-translucent: rgba(30, 34, 42, 0.88);
+  --surface-acrylic: rgba(30, 34, 42, 0.92);
+  --surface-taskbar: rgba(20, 23, 29, 0.94);
+  --surface-dock: rgba(20, 23, 29, 0.92);
+  --surface-menu: #1E222A;
+  --surface-tooltip: #1E222A;
+  --surface-input: #14171D;
+
+  /* Surface Compatibility Aliases for App Components */
+  --bg-surface: var(--surface-base);
+  --bg-surface-elevated: var(--surface-elevated);
+  --color-accent: var(--accent-primary);
+  --bg-hover: rgba(45, 51, 63, 0.6);
+  --bg-active: var(--accent-subtle);
+
+  /* Borders & Dividers - Subtle Steel (#2D333F) crisp 1px solid lines */
+  --border-subtle: #2D333F;
+  --border-medium: #2D333F;
+  --border-strong: #3D4554;
+  --border-focus: #E06C38;
+  --border-glass-highlight: rgba(255, 255, 255, 0.08);
+
+  /* Typography - Cool White (#ECEFF4) & Muted Slate (#8F96A3) */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu", "Helvetica Neue", sans-serif;
+  --font-mono: 'JetBrains Mono', "Cascadia Code", "Fira Code", Consolas, monospace;
+  
+  --text-primary: #ECEFF4;
+  --text-secondary: #8F96A3;
+  --text-muted: #687182;
+  --text-disabled: #4C566A;
+  --text-inverse: #14171D;
+
+  /* Font Sizing */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.8125rem;  /* 13px */
+  --text-base: 0.875rem; /* 14px */
+  --text-md: 0.9375rem;  /* 15px */
+  --text-lg: 1rem;       /* 16px */
+  --text-xl: 1.125rem;   /* 18px */
+  --text-2xl: 1.25rem;   /* 20px */
+  --text-3xl: 1.5rem;    /* 24px */
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Brand, Accents & Glows - Deep Terracotta (#E06C38), Hover (#C85728), Active (#F07D49) */
+  --accent-primary: #E06C38;
+  --accent-secondary: #F07D49;
+  --accent-hover: #C85728;
+  --accent-active: #F07D49;
+  --accent-glow: rgba(224, 108, 56, 0.35);
+  --accent-subtle: rgba(224, 108, 56, 0.15);
+
+  /* Semantic State Tokens - Forest Mint (#2D9C5E), Amber (#D9822B), Crimson (#E05252) */
+  --status-success: #2D9C5E;
+  --status-success-bg: rgba(45, 156, 94, 0.15);
+  --status-warning: #D9822B;
+  --status-warning-bg: rgba(217, 130, 43, 0.15);
+  --status-error: #E05252;
+  --status-error-bg: rgba(224, 82, 82, 0.15);
+  --status-info: #E06C38;
+  --status-info-bg: rgba(224, 108, 56, 0.15);
+
+  /* Geometry & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows & Depth */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.45);
+  --shadow-window: 0 18px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--border-subtle);
+  --shadow-window-focused: 0 24px 64px rgba(0, 0, 0, 0.65), 0 0 0 1px var(--accent-primary), 0 0 20px var(--accent-glow);
+  --shadow-menu: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-medium);
+
+  /* Backdrop Filters */
+  --backdrop-blur: blur(20px) saturate(180%);
+  --backdrop-blur-sm: blur(12px) saturate(150%);
+  --backdrop-blur-taskbar: blur(24px) saturate(200%);
+
+  /* Motion Tokens */
+  --motion-micro: 100ms cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --motion-normal: 180ms cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  --motion-panel: 260ms cubic-bezier(0.16, 1.0, 0.3, 1.0);
+  --motion-window: 300ms cubic-bezier(0.1, 0.9, 0.2, 1.0);
+  --motion-minimize: 250ms cubic-bezier(0.4, 0.0, 0.2, 1.0);
+  --motion-workspace: 380ms cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  --motion-spring: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.15);
+
+  /* Z-Index Hierarchy */
+  --z-desktop: 1;
+  --z-desktop-icons: 10;
+  --z-widgets: 20;
+  --z-windows-base: 100;
+  --z-snap-preview: 500;
+  --z-taskbar: 1000;
+  --z-dock: 1000;
+  --z-flyout-menu: 1100;
+  --z-quick-settings: 1150;
+  --z-notification-center: 1200;
+  --z-command-palette: 1300;
+  --z-modal-overlay: 1400;
+  --z-context-menu: 1500;
+  --z-toast: 1600;
+  --z-lockscreen: 9999;
+}
+
+/* Base Body Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-primary);
+  background-color: var(--bg-desktop);
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-micro: 0ms !important;
+    --motion-normal: 50ms !important;
+    --motion-panel: 50ms !important;
+    --motion-window: 50ms !important;
+    --motion-minimize: 50ms !important;
+    --motion-workspace: 50ms !important;
+    --motion-spring: 50ms !important;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

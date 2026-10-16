@@ -1,0 +1,6 @@
+{
+  "name": "MyOS Desktop",
+  "description": "Windows-like desktop environment and productivity suite with window manager, taskbar, start menu, and apps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

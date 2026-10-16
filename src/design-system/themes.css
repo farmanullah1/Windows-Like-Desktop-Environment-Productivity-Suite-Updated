@@ -1,0 +1,527 @@
+/* ==============================================================================
+   MYOS MASTER DESIGN SYSTEM — 14 THEME PALETTES & GRADIENTS
+   Version 9.0 Visual Identity & Color System
+   ============================================================================== */
+
+:root {
+  /* Reusable Gradient Tokens */
+  --gradient-aurora: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+  --gradient-ocean: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #0d9488 100%);
+  --gradient-sunset: linear-gradient(135deg, #f97316 0%, #f43f5e 50%, #8b5cf6 100%);
+  --gradient-solar: linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #ef4444 100%);
+  --gradient-emerald: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  --gradient-spectrum: linear-gradient(135deg, #06b6d4 0%, #ec4899 50%, #8b5cf6 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.03) 100%);
+  --gradient-edge-light: linear-gradient(90deg, transparent 0%, var(--accent-primary) 50%, transparent 100%);
+  --gradient-focus-progress: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
+  --gradient-selection: linear-gradient(90deg, rgba(66, 103, 213, 0.3) 0%, rgba(139, 92, 246, 0.3) 100%);
+}
+
+/* 1. Midnight Aurora (DEFAULT) / Dark - Terracotta & Charcoal Palette */
+[data-theme="midnight-aurora"],
+[data-theme="dark"],
+[data-theme="aurora"] {
+  --bg-desktop: #14171D;
+  --surface-base: #14171D;
+  --surface-card: #1E222A;
+  --surface-elevated: #1E222A;
+  --surface-translucent: rgba(30, 34, 42, 0.88);
+  --surface-acrylic: rgba(30, 34, 42, 0.92);
+  --surface-taskbar: rgba(20, 23, 29, 0.94);
+  --surface-dock: rgba(20, 23, 29, 0.92);
+  --surface-menu: #1E222A;
+  --surface-input: #14171D;
+
+  --border-subtle: #2D333F;
+  --border-medium: #2D333F;
+  --border-strong: #3D4554;
+  --border-focus: #E06C38;
+
+  --text-primary: #ECEFF4;
+  --text-secondary: #8F96A3;
+  --text-muted: #687182;
+  --text-disabled: #4C566A;
+  --text-inverse: #14171D;
+
+  --accent-primary: #E06C38;
+  --accent-secondary: #F07D49;
+  --accent-hover: #C85728;
+  --accent-active: #F07D49;
+  --accent-glow: rgba(224, 108, 56, 0.35);
+  --accent-subtle: rgba(224, 108, 56, 0.15);
+}
+
+/* 2. Ocean Glass / Ocean */
+[data-theme="ocean-glass"],
+[data-theme="ocean"] {
+  --bg-desktop: #04101c;
+  --surface-base: rgba(7, 26, 44, 0.88);
+  --surface-card: rgba(10, 34, 58, 0.94);
+  --surface-elevated: #0f406c;
+  --surface-translucent: rgba(6, 22, 38, 0.8);
+  --surface-acrylic: rgba(8, 28, 48, 0.85);
+  --surface-taskbar: rgba(5, 18, 32, 0.92);
+  --surface-dock: rgba(9, 30, 52, 0.85);
+  --surface-menu: rgba(10, 36, 62, 0.98);
+  --surface-input: #051626;
+
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.26);
+  --border-focus: #06b6d4;
+
+  --text-primary: #f0f9ff;
+  --text-secondary: #7dd3fc;
+  --text-muted: #38bdf8;
+  --text-disabled: #0369a1;
+  --text-inverse: #082f49;
+
+  --accent-primary: #06b6d4;
+  --accent-secondary: #0ea5e9;
+  --accent-hover: #0891b2;
+  --accent-active: #0e7490;
+  --accent-glow: rgba(6, 182, 212, 0.45);
+  --accent-subtle: rgba(6, 182, 212, 0.15);
+}
+
+/* 3. Solar Flare */
+[data-theme="solar-flare"] {
+  --bg-desktop: #140d08;
+  --surface-base: rgba(30, 18, 10, 0.88);
+  --surface-card: rgba(42, 24, 14, 0.94);
+  --surface-elevated: #54301c;
+  --surface-translucent: rgba(26, 15, 8, 0.8);
+  --surface-acrylic: rgba(36, 21, 12, 0.85);
+  --surface-taskbar: rgba(20, 11, 6, 0.92);
+  --surface-dock: rgba(34, 19, 10, 0.85);
+  --surface-menu: rgba(44, 25, 14, 0.98);
+  --surface-input: #180e07;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-focus: #f59e0b;
+
+  --text-primary: #fffbeb;
+  --text-secondary: #fde68a;
+  --text-muted: #d97706;
+  --text-disabled: #78350f;
+  --text-inverse: #451a03;
+
+  --accent-primary: #f59e0b;
+  --accent-secondary: #f97316;
+  --accent-hover: #d97706;
+  --accent-active: #b45309;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-subtle: rgba(245, 158, 11, 0.15);
+}
+
+/* 4. Emerald Terminal */
+[data-theme="emerald-terminal"] {
+  --bg-desktop: #06120d;
+  --surface-base: rgba(10, 28, 20, 0.88);
+  --surface-card: rgba(14, 38, 27, 0.94);
+  --surface-elevated: #1a4a35;
+  --surface-translucent: rgba(8, 24, 17, 0.8);
+  --surface-acrylic: rgba(12, 34, 24, 0.85);
+  --surface-taskbar: rgba(6, 18, 13, 0.92);
+  --surface-dock: rgba(13, 36, 26, 0.85);
+  --surface-menu: rgba(16, 42, 30, 0.98);
+  --surface-input: #081a13;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-focus: #10b981;
+
+  --text-primary: #ecfdf5;
+  --text-secondary: #a7f3d0;
+  --text-muted: #34d399;
+  --text-disabled: #065f46;
+  --text-inverse: #022c22;
+
+  --accent-primary: #10b981;
+  --accent-secondary: #34d399;
+  --accent-hover: #059669;
+  --accent-active: #047857;
+  --accent-glow: rgba(16, 185, 129, 0.45);
+  --accent-subtle: rgba(16, 185, 129, 0.15);
+}
+
+/* 5. Rose Quartz */
+[data-theme="rose-quartz"] {
+  --bg-desktop: #180d14;
+  --surface-base: rgba(36, 18, 28, 0.88);
+  --surface-card: rgba(48, 24, 38, 0.94);
+  --surface-elevated: #62304d;
+  --surface-translucent: rgba(30, 15, 24, 0.8);
+  --surface-acrylic: rgba(42, 21, 33, 0.85);
+  --surface-taskbar: rgba(24, 12, 19, 0.92);
+  --surface-dock: rgba(40, 20, 31, 0.85);
+  --surface-menu: rgba(52, 26, 41, 0.98);
+  --surface-input: #1c0e17;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-focus: #f43f5e;
+
+  --text-primary: #fff1f2;
+  --text-secondary: #fecdd3;
+  --text-muted: #fb7185;
+  --text-disabled: #9f1239;
+  --text-inverse: #4c0519;
+
+  --accent-primary: #f43f5e;
+  --accent-secondary: #fb7185;
+  --accent-hover: #e11d48;
+  --accent-active: #be123c;
+  --accent-glow: rgba(244, 63, 94, 0.45);
+  --accent-subtle: rgba(244, 63, 94, 0.15);
+}
+
+/* 6. Arctic Light (Polished Light Theme) */
+[data-theme="arctic-light"],
+[data-theme="light"] {
+  --bg-desktop: #e2e8f0;
+  --surface-base: rgba(255, 255, 255, 0.88);
+  --surface-card: rgba(255, 255, 255, 0.95);
+  --surface-elevated: #ffffff;
+  --surface-translucent: rgba(248, 250, 252, 0.8);
+  --surface-acrylic: rgba(255, 255, 255, 0.85);
+  --surface-taskbar: rgba(241, 245, 249, 0.92);
+  --surface-dock: rgba(248, 250, 252, 0.85);
+  --surface-menu: rgba(255, 255, 255, 0.98);
+  --surface-tooltip: #1e293b;
+  --surface-input: #f8fafc;
+
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.14);
+  --border-strong: rgba(0, 0, 0, 0.24);
+  --border-focus: #0284c7;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-disabled: #94a3b8;
+  --text-inverse: #f8fafc;
+
+  --accent-primary: #0284c7;
+  --accent-secondary: #0ea5e9;
+  --accent-hover: #0369a1;
+  --accent-active: #075985;
+  --accent-glow: rgba(2, 132, 199, 0.3);
+  --accent-subtle: rgba(2, 132, 199, 0.12);
+}
+
+/* 7. Sunset Horizon */
+[data-theme="sunset-horizon"] {
+  --bg-desktop: #160c18;
+  --surface-base: rgba(34, 16, 38, 0.88);
+  --surface-card: rgba(46, 22, 52, 0.94);
+  --surface-elevated: #5e2c6a;
+  --surface-translucent: rgba(28, 13, 31, 0.8);
+  --surface-acrylic: rgba(40, 19, 45, 0.85);
+  --surface-taskbar: rgba(22, 10, 25, 0.92);
+  --surface-dock: rgba(38, 18, 43, 0.85);
+  --surface-menu: rgba(50, 24, 56, 0.98);
+  --surface-input: #1b0c1e;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-focus: #f97316;
+
+  --text-primary: #fff7ed;
+  --text-secondary: #fed7aa;
+  --text-muted: #f97316;
+  --text-disabled: #9a3412;
+  --text-inverse: #431407;
+
+  --accent-primary: #f97316;
+  --accent-secondary: #ec4899;
+  --accent-hover: #ea580c;
+  --accent-active: #c2410c;
+  --accent-glow: rgba(249, 115, 22, 0.45);
+  --accent-subtle: rgba(249, 115, 22, 0.15);
+}
+
+/* 8. Cyber Spectrum */
+[data-theme="cyber-spectrum"] {
+  --bg-desktop: #050508;
+  --surface-base: rgba(12, 12, 20, 0.88);
+  --surface-card: rgba(18, 18, 30, 0.94);
+  --surface-elevated: #24243d;
+  --surface-translucent: rgba(10, 10, 17, 0.8);
+  --surface-acrylic: rgba(15, 15, 26, 0.85);
+  --surface-taskbar: rgba(8, 8, 14, 0.92);
+  --surface-dock: rgba(16, 16, 28, 0.85);
+  --surface-menu: rgba(20, 20, 34, 0.98);
+  --surface-input: #0a0a10;
+
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-medium: rgba(255, 255, 255, 0.18);
+  --border-strong: rgba(255, 255, 255, 0.28);
+  --border-focus: #06b6d4;
+
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-disabled: #475569;
+  --text-inverse: #020617;
+
+  --accent-primary: #06b6d4;
+  --accent-secondary: #ec4899;
+  --accent-hover: #22d3ee;
+  --accent-active: #0891b2;
+  --accent-glow: rgba(6, 182, 212, 0.5);
+  --accent-subtle: rgba(6, 182, 212, 0.15);
+}
+
+/* 9. Sage & Sand */
+[data-theme="sage-sand"] {
+  --bg-desktop: #101412;
+  --surface-base: rgba(22, 28, 24, 0.88);
+  --surface-card: rgba(30, 38, 33, 0.94);
+  --surface-elevated: #3c4c42;
+  --surface-translucent: rgba(19, 24, 21, 0.8);
+  --surface-acrylic: rgba(26, 33, 29, 0.85);
+  --surface-taskbar: rgba(16, 20, 18, 0.92);
+  --surface-dock: rgba(27, 34, 30, 0.85);
+  --surface-menu: rgba(33, 42, 36, 0.98);
+  --surface-input: #141a16;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-focus: #84cc16;
+
+  --text-primary: #f7fee7;
+  --text-secondary: #d9f99d;
+  --text-muted: #a3e635;
+  --text-disabled: #4d7c0f;
+  --text-inverse: #1a2e05;
+
+  --accent-primary: #84cc16;
+  --accent-secondary: #eab308;
+  --accent-hover: #65a30d;
+  --accent-active: #4d7c0f;
+  --accent-glow: rgba(132, 204, 22, 0.45);
+  --accent-subtle: rgba(132, 204, 22, 0.15);
+}
+
+/* 10. Monochrome Studio / Graphite */
+[data-theme="monochrome-studio"],
+[data-theme="graphite"] {
+  --bg-desktop: #121316;
+  --surface-base: rgba(24, 25, 28, 0.88);
+  --surface-card: rgba(32, 33, 37, 0.94);
+  --surface-elevated: #3e4046;
+  --surface-translucent: rgba(20, 21, 24, 0.8);
+  --surface-acrylic: rgba(28, 29, 33, 0.85);
+  --surface-taskbar: rgba(18, 19, 22, 0.92);
+  --surface-dock: rgba(29, 30, 34, 0.85);
+  --surface-menu: rgba(34, 35, 39, 0.98);
+  --surface-input: #16171a;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-focus: #a1a1aa;
+
+  --text-primary: #f4f4f5;
+  --text-secondary: #d4d4d8;
+  --text-muted: #a1a1aa;
+  --text-disabled: #71717a;
+  --text-inverse: #18181b;
+
+  --accent-primary: #a1a1aa;
+  --accent-secondary: #e4e4e7;
+  --accent-hover: #d4d4d8;
+  --accent-active: #71717a;
+  --accent-glow: rgba(161, 161, 170, 0.3);
+  --accent-subtle: rgba(161, 161, 170, 0.12);
+}
+
+/* 11. Classic Blue */
+[data-theme="classic-blue"] {
+  --bg-desktop: #0a1128;
+  --surface-base: rgba(14, 25, 54, 0.88);
+  --surface-card: rgba(18, 34, 74, 0.94);
+  --surface-elevated: #1e3a8a;
+  --surface-translucent: rgba(11, 20, 44, 0.8);
+  --surface-acrylic: rgba(16, 29, 64, 0.85);
+  --surface-taskbar: rgba(10, 18, 40, 0.92);
+  --surface-dock: rgba(17, 31, 68, 0.85);
+  --surface-menu: rgba(20, 38, 82, 0.98);
+  --surface-input: #0c1634;
+
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.26);
+  --border-focus: #3b82f6;
+
+  --text-primary: #eff6ff;
+  --text-secondary: #bfdbfe;
+  --text-muted: #60a5fa;
+  --text-disabled: #1d4ed8;
+  --text-inverse: #172554;
+
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --accent-hover: #2563eb;
+  --accent-active: #1d4ed8;
+  --accent-glow: rgba(59, 130, 246, 0.45);
+  --accent-subtle: rgba(59, 130, 246, 0.15);
+}
+
+/* 12. Warm Light */
+[data-theme="warm-light"] {
+  --bg-desktop: #f4efe6;
+  --surface-base: rgba(255, 252, 247, 0.88);
+  --surface-card: rgba(255, 255, 255, 0.95);
+  --surface-elevated: #ffffff;
+  --surface-translucent: rgba(250, 246, 239, 0.8);
+  --surface-acrylic: rgba(255, 252, 247, 0.85);
+  --surface-taskbar: rgba(245, 240, 230, 0.92);
+  --surface-dock: rgba(250, 246, 239, 0.85);
+  --surface-menu: rgba(255, 255, 255, 0.98);
+  --surface-input: #faf6ef;
+
+  --border-subtle: rgba(60, 40, 20, 0.08);
+  --border-medium: rgba(60, 40, 20, 0.14);
+  --border-strong: rgba(60, 40, 20, 0.24);
+  --border-focus: #d97706;
+
+  --text-primary: #291e13;
+  --text-secondary: #57412b;
+  --text-muted: #856645;
+  --text-disabled: #b59b7d;
+  --text-inverse: #fefce8;
+
+  --accent-primary: #d97706;
+  --accent-secondary: #b45309;
+  --accent-hover: #b45309;
+  --accent-active: #92400e;
+  --accent-glow: rgba(217, 119, 6, 0.3);
+  --accent-subtle: rgba(217, 119, 6, 0.12);
+}
+
+/* 13. Deep Space / Midnight */
+[data-theme="deep-space"],
+[data-theme="midnight"] {
+  --bg-desktop: #000000;
+  --surface-base: rgba(10, 10, 18, 0.88);
+  --surface-card: rgba(16, 16, 28, 0.94);
+  --surface-elevated: #20203a;
+  --surface-translucent: rgba(8, 8, 14, 0.8);
+  --surface-acrylic: rgba(12, 12, 22, 0.85);
+  --surface-taskbar: rgba(6, 6, 10, 0.92);
+  --surface-dock: rgba(14, 14, 24, 0.85);
+  --surface-menu: rgba(18, 18, 32, 0.98);
+  --surface-input: #08080e;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.13);
+  --border-strong: rgba(255, 255, 255, 0.24);
+  --border-focus: #818cf8;
+
+  --text-primary: #ffffff;
+  --text-secondary: #c7d2fe;
+  --text-muted: #818cf8;
+  --text-disabled: #4338ca;
+  --text-inverse: #1e1b4b;
+
+  --accent-primary: #818cf8;
+  --accent-secondary: #c084fc;
+  --accent-hover: #6366f1;
+  --accent-active: #4f46e5;
+  --accent-glow: rgba(129, 140, 248, 0.45);
+  --accent-subtle: rgba(129, 140, 248, 0.15);
+}
+
+/* 14. High Contrast (WCAG AAA Accessibility) */
+[data-theme="high-contrast"] {
+  --bg-desktop: #000000;
+  --surface-base: #000000;
+  --surface-card: #000000;
+  --surface-elevated: #000000;
+  --surface-translucent: #000000;
+  --surface-acrylic: #000000;
+  --surface-taskbar: #000000;
+  --surface-dock: #000000;
+  --surface-menu: #000000;
+  --surface-tooltip: #000000;
+  --surface-input: #000000;
+
+  --border-subtle: #ffffff;
+  --border-medium: #ffffff;
+  --border-strong: #ffffff;
+  --border-focus: #ffff00;
+  --border-glass-highlight: #ffffff;
+
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-muted: #ffffaa;
+  --text-disabled: #888888;
+  --text-inverse: #000000;
+
+  --accent-primary: #ffff00;
+  --accent-secondary: #00ffff;
+  --accent-hover: #ffff88;
+  --accent-active: #cccc00;
+  --accent-glow: none;
+  --accent-subtle: rgba(255, 255, 0, 0.2);
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-window: 0 0 0 2px #ffffff;
+  --shadow-window-focused: 0 0 0 3px #ffff00;
+  --shadow-menu: 0 0 0 2px #ffffff;
+
+  --backdrop-blur: none;
+  --backdrop-blur-sm: none;
+  --backdrop-blur-taskbar: none;
+}
+
+/* Ubuntu-Dark Legacy Compatibility */
+[data-theme="ubuntu-dark"] {
+  --bg-desktop: #1e111d;
+  --surface-base: rgba(38, 20, 36, 0.88);
+  --surface-card: rgba(48, 26, 46, 0.94);
+  --surface-elevated: #3b2239;
+  --surface-translucent: rgba(32, 16, 30, 0.8);
+  --surface-taskbar: rgba(26, 12, 24, 0.92);
+  --surface-menu: #2d162b;
+
+  --border-focus: #e95420;
+  --accent-primary: #e95420;
+  --accent-secondary: #77216f;
+  --accent-hover: #ff6e3b;
+  --accent-active: #c73e0c;
+  --accent-glow: rgba(233, 84, 32, 0.45);
+}
+
+/* Effects Performance Tiers */
+[data-effects="minimal"] {
+  --backdrop-blur: none !important;
+  --backdrop-blur-sm: none !important;
+  --backdrop-blur-taskbar: none !important;
+  --shadow-sm: none !important;
+  --shadow-md: none !important;
+  --shadow-lg: none !important;
+  --shadow-window: 0 0 0 1px var(--border-medium) !important;
+  --shadow-window-focused: 0 0 0 2px var(--accent-primary) !important;
+  --shadow-menu: 0 0 0 1px var(--border-strong) !important;
+}
+
+[data-effects="enhanced"] {
+  --accent-glow: rgba(56, 189, 248, 0.55);
+  --shadow-window-focused: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--accent-primary), 0 0 30px var(--accent-glow);
+}
+
+[data-effects="immersive"] {
+  --accent-glow: rgba(56, 189, 248, 0.7);
+  --shadow-window-focused: 0 36px 90px rgba(0, 0, 0, 0.75), 0 0 0 1.5px var(--accent-primary), 0 0 40px var(--accent-glow);
+}
